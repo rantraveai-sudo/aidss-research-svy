@@ -106,12 +106,25 @@
     }
     .question label { font-weight: bold; color: #fff; }
     
+/* System Prompt Box - High Contrast Tactical Amber */
     .ai-box { 
-      border-left: 4px solid #d35400; 
-      background: rgba(211, 84, 0, 0.12); 
+      border-left: 5px solid #fbbf24; 
+      background: linear-gradient(90deg, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.05) 100%);
       padding: 18px; 
       margin: 18px 0; 
-      border-radius: 4px; 
+      border-radius: 0 4px 4px 0; 
+      box-shadow: inset 4px 0 10px rgba(251, 191, 36, 0.1), 0 4px 15px rgba(0, 0, 0, 0.3);
+      color: #f8fafc; /* Crisp white text for readability */
+    }
+    .ai-box h4 {
+      margin-top: 0; 
+      color: #fbbf24; 
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 8px rgba(251, 191, 36, 0.4); /* Neon text glow */
+      margin-bottom: 12px;
+    }
+    .ai-box strong {
+      color: #fbbf24; /* Highlights "RECOMMENDATION:", "CONFIDENCE:", etc. */
     }
     .info-update { 
       background: rgba(220, 38, 38, 0.12); 
@@ -376,7 +389,7 @@
       <!-- Page 2: Aided -->
       <div id="aided-section" class="hidden">
         <div class="ai-box">
-          <h4 style="margin-top:0; color:#d35400;">// SYSTEM PROMPT: AI-DSS OUTPUT //</h4>
+          <h4>// SYSTEM PROMPT: AI-DSS OUTPUT //</h4>
           <p id="ai-recommendation"></p>
           <p id="ai-confidence"></p>
           <p id="ai-rationale"></p>
