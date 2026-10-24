@@ -1175,7 +1175,7 @@ function nextVignette() {
 // -------------------------------------------------------------
 // IMPORTANT: GOOGLE APPS SCRIPT WEB APP URL HERE!!! 
 // -------------------------------------------------------------
-const SUBMIT_API_URL = "https://script.google.com/macros/s/AKfycbw_MvuvmzfalKWeJGZTMS7pBf4U2qSAW26_HcX7vt1ro_0ckxFajO_vqfT9dTcyKLpK/exec";
+const SUBMIT_API_URL = "https://script.google.com/macros/s/AKfycbyuO6_Y-K1XTkfH_1Can9HU9264tbaMb2AALV0hB9d6_pXRa4ps9ZEW_K6Q2pjGF90J/exec";
 
 function showStatus(color, title, message) {
   document.body.innerHTML = "";
@@ -1209,7 +1209,7 @@ function submitSurvey() {
 
 function sendPayload(payload) {
   // Safety check to ensure you replaced the URL
-  if (SUBMIT_API_URL === "https://script.google.com/macros/s/AKfycbw_MvuvmzfalKWeJGZTMS7pBf4U2qSAW26_HcX7vt1ro_0ckxFajO_vqfT9dTcyKLpK/exec" || SUBMIT_API_URL.includes("/api/submit")) {
+  if (SUBMIT_API_URL === "https://script.google.com/macros/s/AKfycbyuO6_Y-K1XTkfH_1Can9HU9264tbaMb2AALV0hB9d6_pXRa4ps9ZEW_K6Q2pjGF90J/exec" || SUBMIT_API_URL.includes("/api/submit")) {
      showStatus('var(--accent-red)', 'Configuration Error', 'The SUBMIT_API_URL is missing or incorrect. Please paste your Google Apps Script /exec link at the bottom of the HTML file.');
      return;
   }
