@@ -756,6 +756,7 @@ const allVignettes = {
 let currentGroup = "";
 let currentIndex = 0;
 let activeVignettes = [];
+let surveyStartTime = 0; // Stopwatch tracking begins here
 
 function startVignettes() {
   const svc = document.querySelector('input[name="Service"]:checked')?.value;
@@ -808,6 +809,10 @@ function startVignettes() {
   activeVignettes = allVignettes[currentGroup] || allVignettes["Ar_1"];
   document.getElementById('demographics-block').classList.add('hidden');
   document.getElementById('vignette-block').classList.remove('hidden');
+  
+  // START THE TIMER
+  surveyStartTime = Date.now();
+  
   renderVignette();
   scrollToTop(); 
 }
@@ -943,6 +948,12 @@ function submitSurvey() {
   formData.forEach((value, key) => {
     payload[key] = value;
   });
+
+  // RECORD THE TOTAL TIME TAKEN
+  if (surveyStartTime > 0) {
+    const timeTakenSeconds = Math.round((Date.now() - surveyStartTime) / 1000);
+    payload["Time_Taken_Sec"] = timeTakenSeconds;
+  }
 
   sendPayload(payload);
 }
