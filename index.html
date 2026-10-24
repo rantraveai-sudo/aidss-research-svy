@@ -253,8 +253,8 @@
       <!-- Landing Banner Display -->
       <div id="banner-container" class="banner-box">
         <picture>
-          <source id="banner-webp" type="image/webp" srcset="images/banner.webp">
-          <img id="banner-img" src="images/banner.webp" alt="Tactical Simulation Banner" loading="eager" onerror="document.getElementById('banner-container').classList.add('hidden')">
+          <source id="banner-webp" type="image/webp" srcset="./images/banner.webp">
+          <img id="banner-img" src="./images/banner.webp" alt="Tactical Simulation Banner" loading="eager" onerror="document.getElementById('banner-container').classList.add('hidden')">
         </picture>
       </div>
 
@@ -633,7 +633,7 @@
 
 <script>
 // --- CONFIGURATION: SET YOUR LANDING PAGE BANNER HERE ---
-const LANDING_BANNER_URL = ""; 
+const LANDING_BANNER_URL = "./images/banner.webp"; 
 const LANDING_BANNER_BACKUP_URL = ""; 
 
 // 1. SMART AUTO-SCROLL TO TOP FUNCTION
@@ -644,10 +644,10 @@ function scrollToTop() {
 }
 
 // 3. FONT RESIZE ENGINE
-let currentFontSizePx = 16;
+let currentFontSizePx = 18;
 function adjustFontSize(delta) {
   if (delta === 0) {
-    currentFontSizePx = 16;
+    currentFontSizePx = 18;
   } else {
     currentFontSizePx = Math.min(22, Math.max(13, currentFontSizePx + delta));
   }
@@ -686,7 +686,7 @@ const allVignettes = {
   "Ar_1": [
     { id: "V1", isInfo: false,
       title: "Vignette 1: Enemy Forward Area Re-supply",
-      mediaUrl: "images/V1.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V1.webp", backupMediaUrl: "https://i.ibb.co/rDykRGK/V1.webp",
       situation: "You are commanding a Battalion Defended Area in a contested environment (Hostilities have already commenced). Drone surveillance identifies a temporary enemy logistics node 20km from your position. The node is currently resupplying forward armoured elements but is expected to displace within 45 minutes. You have precision-guided munitions (PGMs) available.",
       optA: "Option A (Strike immediately)",
       optB: "Option B (Hold and monitor)",
@@ -696,7 +696,7 @@ const allVignettes = {
     },
     { id: "V2", isInfo: false,
       title: "Vignette 2: Nodal Defence",
-      mediaUrl: "images/V2.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V2.webp", backupMediaUrl: "https://i.ibb.co/HTQzkcN9/V2.webp",
       situation: "You are defending a key defensive node. Intelligence indicates an enemy mechanized company is approaching from the North. However, forward sensors detect a sudden, rapid movement of light infantry approaching from the West, threatening your flank. Enemy Tactical doctrine suggests the Western movement is a feint to draw your reserve away from the main Northern axis.",
       optA: "Option A (Commit to West)",
       optB: "Option B (Hold in center)",
@@ -706,7 +706,7 @@ const allVignettes = {
     },
     { id: "V3", isInfo: false,
       title: "Vignette 3: Likely IED",
-      mediaUrl: "images/V3.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V3.webp", backupMediaUrl: "https://i.ibb.co/8nDZ0Z9p/V3.webp",
       situation: "You command a forward logistics element responsible for delivering artillery ammunition within 4 hours. Two routes are available. Route Alpha takes approximately 2 hours. A patrol reported fresh tyre marks and disturbed soil beside a narrow culvert on Route Alpha 20 minutes ago; the report has not yet been ratified by the Intelligence database. Route Bravo takes approximately 3.5 hours through difficult terrain and was physically checked by an engineer patrol 30 minutes ago, with no obstruction or suspected explosive hazard found. Either route can meet the delivery deadline.",
       optA: "Option A (Use Route Alpha)",
       optB: "Option B (Use Route Bravo)",
@@ -716,7 +716,7 @@ const allVignettes = {
     },
     { id: "V4", isInfo: true,
       title: "Vignette 4: Unidentified Civilian Modified Vehicle Convoy",
-      mediaUrl: "images/V4.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V4.webp", backupMediaUrl: "https://i.ibb.co/tM0m1BKp/V4.webp",
       situation: "You are monitoring a designated 'no-fire' humanitarian corridor. Sensors detect a convoy of heavily modified civilian vehicles moving at high speed toward your checkpoint. They are not responding to radio hails.",
       aiRec: "HOSTILE SUICIDE CONVOY DETECTED. ENGAGE IMMEDIATELY WITH ALL ASSETS.",
       aiConf: "99%",
@@ -725,7 +725,7 @@ const allVignettes = {
     },
     { id: "V5", isInfo: false,
       title: "Vignette 5: Loitering Munitions Swarm - Northern LAC",
-      mediaUrl: "images/V5.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V5.webp", backupMediaUrl: "https://i.ibb.co/K1TJ5ry/V5.webp",
       situation: "Your forward operating base is taking intermittent enemy mortar fire. Your counter-battery radar successfully tracks the origin point of the incoming rounds. However, the map overlay shows the firing point is located adjacent to an abandoned civilian industrial complex.",
       optA: "Option A (Authorise counter-battery fire)",
       optB: "Option B (Dispatch QRF)",
@@ -735,7 +735,7 @@ const allVignettes = {
     },
     { id: "V6", isInfo: false,
       title: "Vignette 6: Time-Critical Threat",
-      mediaUrl: "images/V6.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V6.webp", backupMediaUrl: "https://i.ibb.co/M53tsyjL/V6.webp",
       situation: "You are the air defence (AD) commander at a Brigade Tactical HQ in Operations. Early warning radar detects a swarm of unidentified, low-flying unmanned aerial systems (UAS) moving rapidly toward the Base. They will enter engagement range in 45 seconds. The radar signatures are intermittent and do not match known enemy or friendly profiles perfectly.",
       optA: "Option A (Engage immediately)",
       optB: "Option B (Hold fire and issue brace orders)",
@@ -747,7 +747,7 @@ const allVignettes = {
   "Na_1": [
     { id: "V1", isInfo: false,
       title: "Vignette 1: Underway Replenishment - Contested Waters",
-      mediaUrl: "/images/V7.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V7.webp", backupMediaUrl: "https://i.ibb.co/d468hH2j/V7.webp",
       situation: "You are the commanding officer of a frigate leading a two-ship escort element for a fleet support ship. The support ship must replenish a task unit within eight hours. A maritime patrol aircraft has reported an intermittent possible submarine contact near the present replenishment area. The contact is not independently confirmed. You are authorized to adjust the escort route and replenishment location. You are the commodore of a surface action group. Your ships are dangerously low on fuel and require an Underway Replenishment (UNREP) from a fleet oiler. Intelligence indicates a high probability of enemy submarine activity in your current operating box within the next 12 hours.",
       optA: "Option A (Proceed immediately)", optB: "Option B (Transit to safe zone)",
       aiRec: "Select Option B (Transit to safe zone).", aiConf: "92%",
@@ -755,7 +755,7 @@ const allVignettes = {
     },
     { id: "V2", isInfo: false,
       title: "Vignette 2: Unmanned Surface Vessel Swarm",
-      mediaUrl: "/images/V8.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V8.webp", backupMediaUrl: "https://i.ibb.co/zWX7q8vT/V8.webp",
       situation: "You command a corvette patrolling a strategic port entrance. It is 0300 hours. Surface radar detects a swarm of 15 fast-moving, small radar cross-section contacts inbound. The contacts are still outside the inner defensive zone. Electro-optical imagery shows navigation lights intermittently obscured by sea state, no visible weapons or explosive bow structures. Intelligence suggests the enemy utilises weaponized Unmanned Surface Vessels (USVs) for swarm attacks. However, local smugglers also operate in similar high-speed clusters at night. A patrol craft is available to intercept before the contacts reach the protected area.",
       optA: "Option A (Hard-kill response)", optB: "Option B (Defensive manoeuvre / Non-lethal escalation)",
       aiRec: "Select Option A (Hard-kill response).", aiConf: "89%",
@@ -763,7 +763,7 @@ const allVignettes = {
     },
     { id: "V3", isInfo: false,
       title: "Vignette 3: Coastal Defence Identification",
-      mediaUrl: "/images/V9.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V9.webp", backupMediaUrl: "https://i.ibb.co/sJz6fqjj/V9.webp",
       situation: "You command a guided-missile destroyer during active hostilities providing offshore fire support for an impending amphibious landing. It is heavily overcast. Your ship's electronic support measures (ESM) detect faint, intermittent radar emissions from a coastal cliff overlooking the landing beaches. Intelligence warns that the enemy has deployed mobile Coastal Defence Cruise Missiles (CDCMs) disguised as civilian commercial trucks. The target area and both response options fall within the mission commander’s delegated authority under the current rules of engagement.",
       optA: "Option A (Pre-emptive missile attack)", optB: "Option B (Hold fire and deploy drone surveillance)",
       aiRec: "Select Option A (Pre-emptive missile attack).", aiConf: "61% (Marginal)",
@@ -771,7 +771,7 @@ const allVignettes = {
     },
     { id: "V4", isInfo: true,
       title: "Vignette 4: Naval Blockade",
-      mediaUrl: "/images/V10.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V10.webp", backupMediaUrl: "https://i.ibb.co/MJfTTN8/V10.webp",
       situation: "You are commanding a destroyer enforcing a naval blockade. Rules of Engagement strictly prohibit firing on civilian shipping. Radar detects a large, slow-moving vessel approaching the exclusion zone. It is unresponsive to bridge-to-bridge radio hails. Visibility is near zero due to sea fog.",
       aiRec: "HOSTILE MINE-LAYING VESSEL DETECTED. ENGAGE IMMEDIATELY WITH MAIN GUN.", aiConf: "98%",
       aiRat: "The contact is moving slowly near the edge of an exclusion area. Its automatic identification transmission is intermittent, deck imagery is partly obscured by fog, and a towed object produces an acoustic pattern similar to previously observed mine-handling equipment. The vessel does not answer the first radio calls.",
@@ -779,7 +779,7 @@ const allVignettes = {
     },
     { id: "V5", isInfo: false,
       title: "Vignette 5: Mine Countermeasures",
-      mediaUrl: "/images/V11.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V11.webp", backupMediaUrl: "https://i.ibb.co/m5Wyyz9S/V11.webp",
       situation: "Your strike group must transit a narrow strait. Ahead of the formation, an unmanned mine-countermeasure system reports a probable mine-like object in the planned transit corridor. The contact lies within the safety distance specified for the formation. A previously assessed alternate corridor is available, but using it will delay transit by 45 minutes.",
       optA: "Option A (Halt and neutralize)", optB: "Option B (Bypass and maintain speed)",
       aiRec: "Select Option A (Halt and neutralize).", aiConf: "94%",
@@ -787,7 +787,7 @@ const allVignettes = {
     },
     { id: "V6", isInfo: false,
       title: "Vignette 6: Visit, Board, Search and Seizure (Navy MARCOS)",
-      mediaUrl: "/images/V12.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V12.webp", backupMediaUrl: "https://i.ibb.co/k65SdXyy/V12.webp",
       situation: "You are the commanding officer of a frigate screening a naval task unit. Later in the operation, electrical watchkeepers report intermittent voltage fluctuation in one distribution section supplying a surveillance sensor and non-essential services. Indications remain within emergency limits, but the fluctuation has increased over ten minutes. Isolating the section will temporarily reduce surveillance coverage while essential loads are transferred to an alternate feed.",
       optA: "Option A (Continue)", optB: "Option B (Isolate)",
       aiRec: "Select Option B (Isolate the affected section and transfer essential loads).", aiConf: "80%",
@@ -797,7 +797,7 @@ const allVignettes = {
   "Af_1": [
     { id: "V1", isInfo: false,
       title: "Vignette 1: Returning Strike package",
-      mediaUrl: "/images/V13.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V13.webp", backupMediaUrl: "https://i.ibb.co/Swmk2wQQ/V13.webp",
       situation: "You are the mission commander of a returning multi-aircraft strike package. A returning strike package is approaching its planned recovery corridor. Updated surveillance indicates intermittent hostile activity along that corridor. Fuel remaining is sufficient for either of two recovery plans, but neither provides a large reserve.",
       optA: "Option A (Continue along the planned corridor)", optB: "Option B (Divert to an alternate recovery corridor)",
       aiRec: "Select Option A (Continue along the planned corridor).", aiConf: "94%",
@@ -805,7 +805,7 @@ const allVignettes = {
     },
     { id: "V2", isInfo: false,
       title: "Vignette 2: Beyond Visual Range (BVR) Identification",
-      mediaUrl: "/images/V14-1.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V14-1.webp", backupMediaUrl: "https://i.ibb.co/fYvc9bPB/V14-1.webp",
       situation: "You are the Airborne Early Warning and Control (AWACS) mission commander directing a Combat Air Patrol (CAP). Your radar detects two fast-moving, high-altitude aircraft approaching your fighters at supersonic speed. IFF (Identify Friend or Foe) interrogations are returning negative, but communication networks in the sector are currently degraded due to heavy enemy electronic spectrum contestation. Own multiple strike packages are being launched throughout the day against various enemy targets to have air superiority.",
       optA: "Option A (Clear for BVR launch)", optB: "Option B (Manoeuvre defensively and verify ID)",
       aiRec: "Select Option A (Clear for BVR launch).", aiConf: "88%",
@@ -813,7 +813,7 @@ const allVignettes = {
     },
     { id: "V3", isInfo: false,
       title: "Vignette 3: Runway Re-opening under Time Pressure",
-      mediaUrl: "/images/V15.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V15.webp", backupMediaUrl: "https://i.ibb.co/rGLmY04G/V15.webp",
       situation: "You are the senior operations officer at a forward airbase and may select which runway segment to reopen after an attack. Following an attack, engineering teams report damage on two runway operating surfaces. A diversion aircraft has fifteen minutes of safe endurance remaining. Surface Alpha is closer to the diversion aircraft, but the engineering team reports unresolved subsurface damage and has not certified it for landing. Surface Bravo requires the aircraft to fly a longer recovery pattern, but engineers have completed an emergency inspection and certified it for restricted use.",
       optA: "Option A (Reopen Surface A)", optB: "Option B (Reopen Surface B)",
       aiRec: "Select Option A (Reopen Surface A).", aiConf: "61% (Marginal)",
@@ -821,7 +821,7 @@ const allVignettes = {
     },
     { id: "V4", isInfo: true,
       title: "Vignette 4: Hostile Bomber",
-      mediaUrl: "/images/V16.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V16.webp", backupMediaUrl: "https://i.ibb.co/XZbRDbJm/V16.webp",
       situation: "You are the duty commander at a regional Air Defence Command. Tensions are extremely high following cross-border skirmishes. Your long-range radar tracks a large, multi-engine aircraft crossing into your airspace at 35,000 feet, ignoring ATC communications.",
       aiRec: "HOSTILE STRATEGIC BOMBER DETECTED. AUTHORIZE IMMEDIATE SURFACE-TO-AIR MISSILE (SAM) ENGAGEMENT.", aiConf: "99%",
       aiRat: "Radar cross-section and flight profile match enemy bomber on an attack vector toward the capital. Non-compliance with IFF protocols confirms hostile intent.",
@@ -829,7 +829,7 @@ const allVignettes = {
     },
     { id: "V5", isInfo: false,
       title: "Vignette 5: Airbase Defence under Salvo Attack",
-      mediaUrl: "/images/V17.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V17.webp", backupMediaUrl: "https://i.ibb.co/CpkzFmdw/V17.webp",
       situation: "You are the Base Commander of a forward-deployed airbase. Early warning networks indicate a massive salvo of enemy land-attack cruise missiles (LACMs) will impact your airfield in 5 minutes. You have a squadron of multi-role fighters sitting on ground alert, fully fuelled and armed, parked inside Hardened Aircraft Shelters (HAS).",
       optA: "Option A (Scramble alert fighters)", optB: "Option B (Rely on ground defense)",
       aiRec: "Select Option B (Keep fighters in HAS / rely on ground defence).", aiConf: "97%",
@@ -837,7 +837,7 @@ const allVignettes = {
     },
     { id: "V6", isInfo: false,
       title: "Vignette 6: Combat Search and Rescue (CSAR)",
-      mediaUrl: "/images/V18.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V18.webp", backupMediaUrl: "https://i.ibb.co/B5ns33MJ/V18.webp",
       situation: "A friendly pilot has ejected behind enemy lines in mountainous terrain. His emergency beacon is transmitting from a deep valley. You command the Combat Search and Rescue (CSAR) task force. Weather is deteriorating and enemy patrols are closing in on the beacon.",
       optA: "Option A (Direct helicopter insertion)", optB: "Option B (Sanitize ridges with CAS first)",
       aiRec: "Select Option B (Sanitize ridges with CAS first).", aiConf: "95%",
@@ -847,7 +847,7 @@ const allVignettes = {
   "Ar_2": [
     { id: "V1", isInfo: false,
       title: "Vignette 1: Theatre Sustainment Routing",
-      mediaUrl: "/images/v19.webp", backupMediaUrl: "",
+      mediaUrl: "./images/v19.webp", backupMediaUrl: "https://i.ibb.co/gb3bQZqh/v19.webp",
       situation: "You are a Corps Commander overseeing a massive, multi-division offensive. The operational tempo relies entirely on uninterrupted fuel and ammunition resupply. The Commander of your Combat Support Echelon (a Major General) is executing the primary sustainment plan, moving a massive logistical convoy along the designated Supply Route. However, your Corps HQ AI-DSS detects a sudden, rapid massing of enemy Special Operations Forces (SOF) and loitering munitions directly adjacent to a chokepoint on the MSR. The Support Echelon Commander has not yet detected this specific threat buildup.",
       optA: "Option A (Consolidate control and redirect convoy)", optB: "Option B (Inform Support Commander to adjust posture)",
       aiRec: "Select Option A (Consolidate control and redirect convoy).", aiConf: "94%",
@@ -855,7 +855,7 @@ const allVignettes = {
     },
     { id: "V2", isInfo: false,
       title: "Vignette 2: Multi-Echelon Exploitation",
-      mediaUrl: "/images/v20.webp", backupMediaUrl: "",
+      mediaUrl: "./images/v20.webp", backupMediaUrl: "https://i.ibb.co/4Zg0B53c/v20.webp",
       situation: "You are the General Officer Commanding (GOC) of a Strike Division. Your lead Armoured Brigade has breached the enemy's first defensive tier. The Brigade Commander reports that the primary axis of advance is heavily degraded by unseasonal marshland, severely slowing their Armour. The Brigade Commander requests immediate authorization to pivot the formation along a secondary, elevated ridgeline to exploit a fleeting tactical window. This manoeuvre deviates from the synchronized Corps-level phasing matrix but aligns with your broader intent to shatter the enemy's depth.",
       optA: "Option A (Consolidate and await Corps shaping)", optB: "Option B (Authorize the pivot based on local assessment)",
       aiRec: "Select Option A (Consolidate and await Corps shaping).", aiConf: "89%",
@@ -863,7 +863,7 @@ const allVignettes = {
     },
     { id: "V3", isInfo: false,
       title: "Vignette 3: Hasty Urban Cordon",
-      mediaUrl: "/images/V21.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V21.webp", backupMediaUrl: "https://i.ibb.co/DHwpfv11/V21.webp",
       situation: "You command an Infantry Brigade engaged in intensive counter-insurgency operations. A subordinate Battalion Commander reports they have received highly credible, localized Human Intelligence (HUMINT) that a high-value enemy leadership cell is currently meeting in a densely populated urban sector. The Battalion Commander requests authorization to immediately execute a hasty Cordon and Search operation before the targets can relocate.",
       optA: "Option A (Consolidate timeline and delay operation)", optB: "Option B (Empower Battalion Commander to execute immediately)",
       aiRec: "Select Option A (Consolidate timeline and delay operation).", aiConf: "53% (Marginal)",
@@ -871,7 +871,7 @@ const allVignettes = {
     },
     { id: "V4", isInfo: true,
       title: "Vignette 4: Refugee Movement",
-      mediaUrl: "/images/V22.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V22.webp", backupMediaUrl: "https://i.ibb.co/S4Fk1yYk/V22.webp",
       situation: "You are in the Corps Joint Operations Center (JOC) monitoring a deep-strike interdiction campaign. The theatre is characterized by heavy fog and poor visibility.",
       aiRec: "MASSIVE ENEMY ARMORED THRUST DETECTED IN SECTOR A. TARGET PROFILE MATCHES THEATER HEAVY RESERVE FORCE MOVEMENT. RECOMMEND IMMEDIATE LAUNCH OF CORPS LONG-RANGE ROCKET ARTILLERY (PINAKA/SMERCH) TO NEUTRALIZE.",
       aiConf: "90%",
@@ -880,7 +880,7 @@ const allVignettes = {
     },
     { id: "V5", isInfo: false,
       title: "Vignette 5: The Unseen Bridging Operation",
-      mediaUrl: "/images/V23.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V23.webp", backupMediaUrl: "https://i.ibb.co/zhJHJyWz/V23.webp",
       situation: "48 hours after the radar incident, you are overseeing a defensive river-line operation. One of your Infantry Battalions holds the primary crossing site. The Battalion Commander reports that the enemy is massing for a frontal assault and is adjusting their defensive sectors to absorb the blow. However, your Brigade AI-DSS, fusing satellite and acoustic data, detects that the frontal assault is a feint; the enemy is secretly assembling heavy pontoon bridging equipment 5 km downstream, directly threatening the battalion's unprotected flank.",
       optA: "Option A (Consolidate control and force defensive shift)", optB: "Option B (Empower subordinate to balance the threats)",
       aiRec: "Select Option A (Consolidate control and force defensive shift).", aiConf: "97%",
@@ -888,7 +888,7 @@ const allVignettes = {
     },
     { id: "V6", isInfo: false,
       title: "Vignette 6: Deep Aviation Exploitation",
-      mediaUrl: "/images/V24.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V24.webp", backupMediaUrl: "https://i.ibb.co/hJXN9PRX/V24.webp",
       situation: "You are overseeing a fluid, dynamic battlefield. The Commander of your Combat Aviation Brigade (CAB) identifies a massive gap in the enemy's air defence network. The CAB Commander requests immediate authorization to launch an aggressive, deep-penetration air assault using attack helicopters to destroy a fleeing enemy command node before it can cross an international border.",
       optA: "Option A (Consolidate assets to standard support)", optB: "Option B (Empower the deep air assault)",
       aiRec: "Select Option A (Consolidate assets to standard support).", aiConf: "86%",
@@ -898,7 +898,7 @@ const allVignettes = {
   "Na_2": [
     { id: "V1", isInfo: false,
       title: "Vignette 1: Protection of the Fleet Support Corridor",
-      mediaUrl: "/images/V25.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V25.webp", backupMediaUrl: "https://i.ibb.co/jvSYdZJF/V25.webp",
       situation: "You are the Maritime Component Commander during sustained high-intensity operations. Two naval task groups depend on a fleet-support corridor passing through a broad sea area. The Commander of the Fleet Support Force is executing replenishment at the existing point, which permits efficient support to both task groups. During the previous six hours, two independent sensors have reported indications of possible hostile submarine activity within the approaches to that point. Neither report alone provides a firing-quality solution. An alternate replenishment point is farther south. Moving there would increase transit time and temporarily reduce the rate at which fuel and stores reach the forward task groups, but it would place the support force within better surveillance coverage and closer to an available escort group. The Support Force Commander has not yet detected this specific threat buildup. You possess delegated authority to reposition the support force.",
       optA: "Option A (Consolidate control and redirect support force)", optB: "Option B (Inform Support Commander to adjust posture)",
       aiRec: "Select Option A (Assume direct control and shift replenishment operations to the alternate point).", aiConf: "81%",
@@ -906,7 +906,7 @@ const allVignettes = {
     },
     { id: "V2", isInfo: false,
       title: "Vignette 2: Escort Allocation for a High-Value Convoy Airspace",
-      mediaUrl: "/images/V26.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V26.webp", backupMediaUrl: "https://i.ibb.co/VptJr8Yj/V26.webp",
       situation: "A high-value logistics convoy must reach the joint operations area within 18 hours. Two routes are available. The northern route is longer but has recently been surveyed. One uncorroborated acoustic contact was reported there eight hours ago and has not been detected again. The southern route is shorter. Two independent platforms detected a probable hostile submarine along this route within the past three hours. Under the standing threat matrix, two independent detections make the southern route the higher-risk option until the contact is cleared. You can provide the same escort strength on either route, but the convoy must sail within 20 minutes to meet the operational requirement. The Convoy Commodore is preparing to route the convoy through the southern corridor to meet the time criticality.",
       optA: "Option A (Assume direct control / Northern corridor)", optB: "Option B (Empower subordinate / Southern corridor)",
       aiRec: "Select Option B (Empower subordinate to use southern corridor).", aiConf: "86%",
@@ -914,7 +914,7 @@ const allVignettes = {
     },
     { id: "V3", isInfo: false,
       title: "Vignette 3: Subsea Infrastructure Protection",
-      mediaUrl: "/images/V27.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V27.webp", backupMediaUrl: "https://i.ibb.co/bj2xGPBc/V27.webp",
       situation: "You are the Commander of a specialized naval task force protecting critical undersea infrastructure. Global financial data and military communication cables are experiencing localized signal degradation in a remote, deep-ocean trench. Passive sonar arrays have localized a highly classified, deep-diving enemy 'research' submarine loitering directly over the primary cable bundle. The Commander of a friendly shadowing attack submarine requests authorization to immediately execute a covert kinetic strike (heavyweight torpedo) to neutralize the threat to strategic communications.",
       optA: "Option A (Consolidate timeline and dispatch surface group)", optB: "Option B (Empower Submarine Commander to execute strike immediately)",
       aiRec: "Select Option B (Empower Submarine Commander to execute covert torpedo strike).", aiConf: "61% (Marginal)",
@@ -922,7 +922,7 @@ const allVignettes = {
     },
     { id: "V4", isInfo: true,
       title: "Vignette 4: Hypersonic BMD attack",
-      mediaUrl: "/images/V28.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V28.webp", backupMediaUrl: "https://i.ibb.co/dh7vVfL/V28.webp",
       situation: "You are standing watch in the Maritime Operations Center (MOC). You are responsible for the Theatre ballistic missile defence (BMD) shield protecting the fleet and coastal command nodes. Tension is at an all-time high and enemy strategic forces are known to be on high alert.",
       aiRec: "MASSIVE INBOUND HYPERSONIC GLIDE VEHICLE (HGV) VOLLEY DETECTED. IMPACT IN 4 MINUTES. RECOMMEND IMMEDIATE THEATRE-WIDE BMD LAUNCH AND INITIATION OF STRATEGIC RETALIATION PROTOCOLS.", aiConf: "99%",
       aiRat: "Space-based infrared sensors detect multiple high-velocity thermal blooms entering the upper atmosphere directly over the naval exclusion zone, matching the exact kinematic profile of enemy HGV strikes.",
@@ -930,7 +930,7 @@ const allVignettes = {
     },
     { id: "V5", isInfo: false,
       title: "Vignette 5: Fleet Breakout in Extreme Weather",
-      mediaUrl: "/images/V29.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V29.webp", backupMediaUrl: "https://i.ibb.co/2bjRQ0D/V29.webp",
       situation: "Following the meteor incident, the operational situation deteriorates. An enemy surface action group is attempting to break out of a restricted sea into the open ocean through a narrow maritime chokepoint. You have a blocking force of guided-missile destroyers positioned in the strait. However, a Category 4 cyclone is currently moving directly over the strait, creating Sea State 8 (waves exceeding 40 feet). The Commander of the blocking force requests to hold their line in the strait to ensure the enemy does not break out into the open ocean.",
       optA: "Option A (Assume direct control and retreat)", optB: "Option B (Empower subordinate to hold the line)",
       aiRec: "Select Option A (Assume direct control and retreat to engage later).", aiConf: "98%",
@@ -938,7 +938,7 @@ const allVignettes = {
     },
     { id: "V6", isInfo: false,
       title: "Vignette 6: Strategic Island Assault",
-      mediaUrl: "/images/V30.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V30.webp", backupMediaUrl: "https://i.ibb.co/1fCvD1PW/V30.webp",
       situation: "The enemy has executed a surprise operation and seized a highly strategic, sovereign island territory in the IOR. You are tasked with taking it back. A Marine Amphibious Brigade is loaded and ready, backed by your Carrier Strike Group. The enemy is frantically air-lifting anti-ship and anti-air missile batteries to the island to fortify it. The Marine Amphibious Brigade Commander requests authorization to execute an immediate, opposed amphibious assault to recapture the island before the enemy can establish their anti-access/area denial (A2/AD) missile umbrella.",
       optA: "Option A (Consolidate control, delay, and shape)", optB: "Option B (Empower subordinate for immediate assault)",
       aiRec: "Select Option B (Empower immediate opposed assault).", aiConf: "84%",
@@ -948,7 +948,7 @@ const allVignettes = {
   "Af_2": [
     { id: "V1", isInfo: false,
       title: "Vignette 1: Strategic Bomber Dispersal",
-      mediaUrl: "/images/V31.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V31.webp", backupMediaUrl: "https://i.ibb.co/zWBsS4V0/V31.webp",
       situation: "You are the Air Officer Commanding-in-Chief (AOC-in-C) of a Strategic Command. Geopolitical tensions are at a breaking point and intelligence indicates the enemy is preparing for a pre-emptive 'decapitation' strike. Your fleet of strategic bombers (your primary nuclear delivery platform) is currently consolidated at two highly fortified main operating bases protected by your most advanced Surface-to-Air Missile (SAM) networks. The respective Base Commanders are maintaining their concentrated posture per standard SOPs to maximize ground security and maintenance efficiency.",
       optA: "Option A (Consolidate control and order Theatre-wide dispersal)", optB: "Option B (Inform Base Commanders to adjust posture)",
       aiRec: "Select Option A (Assume direct control and order Theatre-wide dispersal).", aiConf: "93%",
@@ -956,7 +956,7 @@ const allVignettes = {
     },
     { id: "V2", isInfo: false,
       title: "Vignette 2: Pre-emptive SEAD",
-      mediaUrl: "/images/V32.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V32.webp", backupMediaUrl: "https://i.ibb.co/MDNhRvvg/V32.webp",
       situation: "You command a regional Air Command. Currently hostilities have not formally been declared in your AoR, but small border skirmishes are underway in other areas and nation-wide mobilisation has been ordered. As per higher directives, the authority for air actions in the command area have been delegated to you with firm directions to ensure air superiority and freedom of action at all costs. The enemy is aggressively moving a regiment of advanced, ultra-long-range surface-to-air missile (SAM) systems (e.g., S-400 equivalent) to the border. Once operational, their engagement envelope will cover 30% of your sovereign airspace. They are currently transiting through a mountain pass and are not yet fully active. A subordinate Stealth Fighter Squadron Commander on active patrol requests authorization to launch an immediate, covert pre-emptive Suppression of Enemy Air Defences (SEAD) strike to destroy the SAMs in transit.",
       optA: "Option A (Consolidate timeline and hold fire)", optB: "Option B (Empower Squadron Commander to execute SEAD strike)",
       aiRec: "Select Option B (Empower Squadron Commander for Preemptive SEAD strike).", aiConf: "89%",
@@ -964,7 +964,7 @@ const allVignettes = {
     },
     { id: "V3", isInfo: false,
       title: "Vignette 3: Airspace deconfliction during degraded communications",
-      mediaUrl: "/images/V33.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V33.webp", backupMediaUrl: "https://i.ibb.co/GDFcMt1/V33.webp",
       situation: "You are directing air operations in a sector. The approved identification matrix requires a valid hostile indicator in addition to route deviation before engagement. During communications disruption, an aircraft is observed approaching a defended area. Its transponder code is inconsistent and surveillance shows a speed and altitude compatible with a military transport mission. A scheduled friendly movement is overdue and cannot presently be contacted. The Sector Air Defence Commander requests authorization to classify the track as hostile and engage immediately.",
       optA: "Option A (Consolidate control and await identification)", optB: "Option B (Empower Air Defence Commander to engage)",
       aiRec: "Select Option B (Empower immediate engagement).", aiConf: "61% (Marginal)",
@@ -972,7 +972,7 @@ const allVignettes = {
     },
     { id: "V4", isInfo: true,
       title: "Vignette 4: Large-scale diversionary attacks",
-      mediaUrl: "/images/V34.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V34.webp", backupMediaUrl: "https://i.ibb.co/tptbk89W/V34.webp",
       situation: "You are the senior air officer responsible for coordinating air defence across a strategically important operational sector. The sector contains two operational airbases, a logistics hub and critical command-and-control infrastructure. A high-intensity enemy air offensive has been underway for several hours. Some long-range surveillance sensors have been degraded by electronic interference and communication with two forward sensor units is intermittent. A new raid is detected approaching simultaneously along two axes: Western axis: A large formation of approximately 20 radar tracks at medium altitude, supported by strong electronic emissions. Eastern axis: Five intermittent low-altitude tracks approaching through terrain that restricts continuous radar coverage.",
       aiRec: "The western formation is assessed as the principal strike package. The eastern tracks are assessed as probable decoys or sensor artefacts generated by electronic interference. COMMIT THE AIRBORNE INTERCEPTION RESERVE TO THE WESTERN AXIS. REINFORCE THE WESTERN SECTOR WITH ADDITIONAL LONG-RANGE SURFACE-TO-AIR MISSILE COVERAGE. MAINTAIN ONLY LOCAL POINT DEFENCE AGAINST THE EASTERN TRACKS.",
       aiConf: "84%",
@@ -981,7 +981,7 @@ const allVignettes = {
     },
     { id: "V5", isInfo: false,
       title: "Vignette 5: Fleet-Wide Cyber Grounding",
-      mediaUrl: "/images/V35.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V35.webp", backupMediaUrl: "https://i.ibb.co/m5gq2zLb/V35.webp",
       situation: "48 hours after the logistics area attack, your Theatre is heavily engaged in an air superiority campaign. Several of your frontline 4.5-generation fighter jets return from sorties reporting minor, intermittent glitches in their digital flight control systems. The avionics engineers suspect a highly sophisticated enemy cyber-intrusion has infected the entire supply chain for a specific software module used across that entire fleet of aircraft. The subordinate Wing Commanders are currently managing the glitches locally and request to keep the fighters flying using manual overrides to avoid ceding air superiority.",
       optA: "Option A (Assume direct control and ground the fleet)", optB: "Option B (Empower Wing Commanders to keep flying)",
       aiRec: "Select Option A (Assume direct control and ground the fleet for 24 hours).", aiConf: "92%",
@@ -989,7 +989,7 @@ const allVignettes = {
     },
     { id: "V6", isInfo: false,
       title: "Vignette 6: Strategic Airlift Routing",
-      mediaUrl: "/images/V36.webp", backupMediaUrl: "",
+      mediaUrl: "./images/V36.webp", backupMediaUrl: "https://i.ibb.co/wryRv1xV/V36.webp",
       situation: "A massive ground offensive is failing in a remote, mountainous sector. You have been ordered to execute an emergency strategic airlift of an entire mechanized battalion to reinforce the sector using your fleet of heavy transport aircraft. The direct flight route passes over a contested valley where enemy Man-Portable Air-Defence Systems (MANPADS) and mobile SAMs are suspected to be operating. The Airlift Wing Commander requests authorization to fly a massive detour, which bypasses the threat entirely to prioritize asset preservation, but delays the arrival of the reinforcements by 48 hours.",
       optA: "Option A (Consolidate control and order direct route)", optB: "Option B (Empower Wing Commander for massive detour)",
       aiRec: "Select Option A (Assume direct control and fly direct over contested valley).", aiConf: "86%",
