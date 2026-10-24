@@ -1210,7 +1210,7 @@ function submitSurvey() {
 
 function sendPayload(payload) {
   // Safety check to ensure you replaced the URL
-  if (SUBMIT_API_URL === "PASTE_YOUR_APPS_SCRIPT_URL_HERE" || SUBMIT_API_URL.includes("/api/submit")) {
+  if (SUBMIT_API_URL === "https://script.google.com/macros/s/AKfycbw_MvuvmzfalKWeJGZTMS7pBf4U2qSAW26_HcX7vt1ro_0ckxFajO_vqfT9dTcyKLpK/exec" || SUBMIT_API_URL.includes("/api/submit")) {
      showStatus('var(--accent-red)', 'Configuration Error', 'The SUBMIT_API_URL is missing or incorrect. Please paste your Google Apps Script /exec link at the bottom of the HTML file.');
      return;
   }
